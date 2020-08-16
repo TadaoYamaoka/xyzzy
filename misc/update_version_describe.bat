@@ -15,7 +15,7 @@ rem
 rem git describe に --long を指定しないとコミット回数が 0 の場合に
 rem タグしか表示されない
 
-set GIT_DESCRIBE=git describe --tags --dirty
+set GIT_DESCRIBE=git describe --tags
 for /F "usebackq" %%i in (`%GIT_DESCRIBE% --long 2^> nul`) do (
   set DESCRIBE_LONG=%%i
 )
